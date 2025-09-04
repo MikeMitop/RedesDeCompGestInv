@@ -185,7 +185,11 @@ def obtener_productos_servidor():
         )
         
         if response.status_code == 200:
-            return response.json()
+            productos_data = response.json()
+            return jsonify({
+                'success': True,
+                'productos': productos_data
+            })
         else:
             return jsonify({
                 'success': False,

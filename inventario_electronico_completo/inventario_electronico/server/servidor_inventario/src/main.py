@@ -68,12 +68,12 @@ def productos():
             return jsonify({"error": "Cantidad y precio deben ser números válidos"}), 400
 
         try:
-            db_manager.add_product(
+            db_manager.crear_producto(
                 nombre,
-                descripcion,
-                categoria,
                 cantidad,
                 precio,
+                descripcion,
+                categoria,
                 proveedor,
             )
             # Notificar a los clientes sobre el nuevo producto
@@ -84,7 +84,7 @@ def productos():
 
     else:  # GET request
         try:
-            productos_data = db_manager.get_all_products()
+            productos_data = db_manager.obtener_productos()
             return jsonify(productos_data)
         except Exception as e:
             return jsonify({"error": f"Error al obtener productos: {str(e)}"}), 500
@@ -92,7 +92,7 @@ def productos():
 @app.route("/api/estadisticas")
 def get_stats():
     try:
-        stats = db_manager.get_inventory_stats()
+        stats = db_manager.obtener_estadisticas()
         return jsonify(stats)
     except Exception as e:
         return jsonify({"error": f"Error al obtener estadísticas: {str(e)}"}), 500
@@ -116,8 +116,8 @@ def handle_solicitar_inventario():
 
 def emit_inventory_update():
     try:
-        productos = db_manager.get_all_products() # Cambiado de obtener_productos a get_all_products
-        stats = db_manager.get_inventory_stats()
+        productos = db_manager.obtener_productos() # Cambiado de get_all_products a obtener_productos
+        stats = db_manager.obtener_estadisticas()
         socketio.emit('inventario_actualizado', {
             'productos': productos,
             'estadisticas': stats,
