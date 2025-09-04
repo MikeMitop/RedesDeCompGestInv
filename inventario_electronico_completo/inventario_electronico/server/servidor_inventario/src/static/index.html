@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor de Inventario - Máquina 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-server"></i>
+                    <h1>Servidor de Inventario</h1>
+                    <span class="machine-label">Máquina 1</span>
+                </div>
+                <div class="connection-status">
+                    <div class="status-indicator" id="connectionStatus">
+                        <i class="fas fa-circle"></i>
+                        <span id="statusText">Conectando...</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Stats -->
+        <section class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-boxes"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="totalProductos">0</h3>
+                    <p>Total Productos</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="totalClientes">0</h3>
+                    <p>Total Clientes</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="valorInventario">$0</h3>
+                    <p>Valor Inventario</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="stockBajo">0</h3>
+                    <p>Stock Bajo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controls -->
+        <section class="controls">
+            <div class="control-buttons">
+                <button class="btn btn-primary" onclick="actualizarInventario()">
+                    <i class="fas fa-sync-alt"></i>
+                    Actualizar Inventario
+                </button>
+                <button class="btn btn-secondary" onclick="exportarDatos()">
+                    <i class="fas fa-download"></i>
+                    Exportar Datos
+                </button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="filtrarProductos()">
+            </div>
+        </section>
+
+        <!-- Inventory Table -->
+        <section class="inventory-section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-warehouse"></i>
+                    Inventario de Productos
+                </h2>
+                <div class="last-update">
+                    Última actualización: <span id="lastUpdate">--</span>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table class="inventory-table" id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                            <th>Categoría</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryBody">
+                        <!-- Los productos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Activity Log -->
+        <section class="activity-section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-history"></i>
+                    Registro de Actividad
+                </h2>
+                <button class="btn btn-small" onclick="limpiarLog()">
+                    <i class="fas fa-trash"></i>
+                    Limpiar
+                </button>
+            </div>
+            <div class="activity-log" id="activityLog">
+                <!-- Los logs se mostrarán aquí -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Cargando inventario...</p>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

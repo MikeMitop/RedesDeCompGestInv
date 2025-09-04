@@ -1,0 +1,37 @@
+nohup: ignoring input
+Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+=== Cliente de Inventario Electrónico ===
+Máquina 2 - Ingreso de Datos
+Puerto: 5001
+Servidor de inventario: http://localhost:5000
+IPs permitidas: ['192.168.1.2', '192.168.1.3', '127.0.0.1', 'localhost']
+=========================================
+ * Serving Flask app 'main'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://169.254.0.21:5001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+ * Debugger is active!
+ * Debugger PIN: 112-515-422
+127.0.0.1 - - [03/Sep/2025 22:24:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:24:11] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:24:11] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:24:11] "GET /socket.io/?EIO=4&transport=polling&t=PaIYUSz HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:24:11] "POST /socket.io/?EIO=4&transport=polling&t=PaIYUT_&sid=WTaIoOe7boSS3cK7AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:24:11] "GET /socket.io/?EIO=4&transport=polling&t=PaIYUU0&sid=WTaIoOe7boSS3cK7AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:24:11] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:24:11] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:25:21] "[35m[1mPOST /api/productos HTTP/1.1[0m" 500 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /socket.io/?EIO=4&transport=websocket&sid=WTaIoOe7boSS3cK7AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "[36mGET / HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "[36mGET /script.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "GET /socket.io/?EIO=4&transport=polling&t=PaIZXI3 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "[36mGET /styles.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "POST /socket.io/?EIO=4&transport=polling&t=PaIZXIT&sid=zt8QlIhum0Z70evbAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "GET /socket.io/?EIO=4&transport=polling&t=PaIZXIW&sid=zt8QlIhum0Z70evbAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:45] "GET /socket.io/?EIO=4&transport=polling&t=PaIZXIv&sid=zt8QlIhum0Z70evbAAAC HTTP/1.1" 200 -

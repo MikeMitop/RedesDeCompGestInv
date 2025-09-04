@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch de Inventario - Máquina 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <i class="fas fa-network-wired"></i>
+                <h1>Switch de Inventario</h1>
+                <span class="machine-badge">Máquina 3</span>
+            </div>
+            <div class="header-right">
+                <div class="connection-status" id="connectionStatus">
+                    <i class="fas fa-circle"></i>
+                    <span>Switch Operativo</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Estado del Switch -->
+        <section class="switch-status">
+            <div class="status-card">
+                <div class="status-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="status-info">
+                    <h3>Estado del Switch</h3>
+                    <p id="switchStatus">Balanceador de carga activo</p>
+                    <small id="switchUptime">Uptime: Calculando...</small>
+                </div>
+                <div class="status-indicator active" id="switchIndicator"></div>
+            </div>
+        </section>
+
+        <!-- Estadísticas del Switch -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="totalRequests">0</h3>
+                    <p>Total Peticiones</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="activeServers">0</h3>
+                    <p>Servidores Activos</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="avgLatency">0ms</h3>
+                    <p>Latencia Promedio</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="totalErrors">0</h3>
+                    <p>Errores</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Control de Servidores -->
+        <section class="servers-section">
+            <div class="section-header">
+                <h2><i class="fas fa-list"></i> Servidores Configurados</h2>
+                <button class="btn btn-primary" onclick="refreshServers()">
+                    <i class="fas fa-sync-alt"></i> Actualizar
+                </button>
+            </div>
+
+            <div class="servers-container" id="serversContainer">
+                <!-- Los servidores se cargarán dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Registro de Actividad -->
+        <section class="activity-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Registro de Actividad del Switch</h2>
+                <button class="btn btn-secondary" onclick="clearActivity()">
+                    <i class="fas fa-trash"></i> Limpiar
+                </button>
+            </div>
+
+            <div class="activity-log" id="activityLog">
+                <div class="activity-item">
+                    <span class="activity-time" id="startTime"></span>
+                    <span class="activity-text">Switch iniciado</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monitoreo de Tráfico -->
+        <section class="traffic-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Monitoreo de Tráfico</h2>
+            </div>
+
+            <div class="traffic-stats">
+                <div class="traffic-card">
+                    <h4>Distribución por Servidor</h4>
+                    <div class="traffic-chart" id="serverDistribution">
+                        <!-- Gráfico de distribución -->
+                    </div>
+                </div>
+
+                <div class="traffic-card">
+                    <h4>Peticiones por Minuto</h4>
+                    <div class="traffic-metrics" id="trafficMetrics">
+                        <div class="metric">
+                            <span class="metric-label">Último minuto:</span>
+                            <span class="metric-value" id="lastMinuteRequests">0</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Promedio:</span>
+                            <span class="metric-value" id="avgRequests">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

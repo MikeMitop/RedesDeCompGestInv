@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente de Inventario - Máquina 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-laptop"></i>
+                    <h1>Cliente de Inventario</h1>
+                    <span class="machine-label">Máquina 2</span>
+                </div>
+                <div class="connection-status">
+                    <div class="status-indicator" id="connectionStatus">
+                        <i class="fas fa-circle"></i>
+                        <span id="statusText">Conectando...</span>
+                    </div>
+                    <button class="btn btn-small btn-test" onclick="probarConexionServidor()">
+                        <i class="fas fa-plug"></i>
+                        Probar Servidor
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Server Status -->
+        <section class="server-status">
+            <div class="status-card">
+                <div class="status-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="status-info">
+                    <h3>Estado del Servidor</h3>
+                    <p id="serverStatusText">Verificando conexión...</p>
+                    <small id="serverUrl">localhost:5000</small>
+                </div>
+                <div class="status-indicator-small" id="serverStatusIndicator">
+                    <i class="fas fa-circle"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Form -->
+        <section class="form-section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-plus-circle"></i>
+                    Agregar Nuevo Producto
+                </h2>
+                <div class="form-actions">
+                    <button class="btn btn-secondary" onclick="limpiarFormulario()">
+                        <i class="fas fa-eraser"></i>
+                        Limpiar
+                    </button>
+                    <button class="btn btn-secondary" onclick="cargarProductosServidor()">
+                        <i class="fas fa-sync-alt"></i>
+                        Ver Productos
+                    </button>
+                </div>
+            </div>
+            
+            <form id="productForm" class="product-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombreProducto">
+                            <i class="fas fa-tag"></i>
+                            Nombre del Producto *
+                        </label>
+                        <input type="text" id="nombreProducto" name="nombre_producto" required 
+                               placeholder="Ej: Smartphone Galaxy S24">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cantidad">
+                            <i class="fas fa-boxes"></i>
+                            Cantidad *
+                        </label>
+                        <input type="number" id="cantidad" name="cantidad" required min="0" 
+                               placeholder="Ej: 25">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="precio">
+                            <i class="fas fa-dollar-sign"></i>
+                            Precio *
+                        </label>
+                        <input type="number" id="precio" name="precio" required min="0" step="0.01" 
+                               placeholder="Ej: 599.99">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="categoria">
+                            <i class="fas fa-list"></i>
+                            Categoría
+                        </label>
+                        <select id="categoria" name="categoria">
+                            <option value="">Seleccionar categoría</option>
+                            <option value="Electrónicos">Electrónicos</option>
+                            <option value="Computadoras">Computadoras</option>
+                            <option value="Accesorios">Accesorios</option>
+                            <option value="Telefonía">Telefonía</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="Hogar">Hogar</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="proveedor">
+                            <i class="fas fa-truck"></i>
+                            Proveedor
+                        </label>
+                        <input type="text" id="proveedor" name="proveedor" 
+                               placeholder="Ej: Samsung, Apple, Dell">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="descripcion">
+                            <i class="fas fa-align-left"></i>
+                            Descripción
+                        </label>
+                        <textarea id="descripcion" name="descripcion" rows="3" 
+                                  placeholder="Descripción detallada del producto..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar al Servidor
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Products List -->
+        <section class="products-section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-list"></i>
+                    Productos del Servidor
+                </h2>
+                <div class="products-stats">
+                    <span id="productsCount">0 productos</span>
+                </div>
+            </div>
+            
+            <div class="products-container" id="productsContainer">
+                <div class="empty-state">
+                    <i class="fas fa-box-open"></i>
+                    <p>Haz clic en "Ver Productos" para cargar la lista del servidor</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Log -->
+        <section class="activity-section">
+            <div class="section-header">
+                <h2>
+                    <i class="fas fa-history"></i>
+                    Registro de Actividad
+                </h2>
+                <button class="btn btn-small" onclick="limpiarLog()">
+                    <i class="fas fa-trash"></i>
+                    Limpiar
+                </button>
+            </div>
+            <div class="activity-log" id="activityLog">
+                <!-- Los logs se mostrarán aquí -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Enviando datos al servidor...</p>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-edit"></i>
+                    Editar Producto
+                </h3>
+                <button class="modal-close" onclick="cerrarModalEdicion()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="editForm" class="edit-form">
+                <input type="hidden" id="editId" name="id_producto">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="editNombre">Nombre del Producto *</label>
+                        <input type="text" id="editNombre" name="nombre_producto" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editCantidad">Cantidad *</label>
+                        <input type="number" id="editCantidad" name="cantidad" required min="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editPrecio">Precio *</label>
+                        <input type="number" id="editPrecio" name="precio" required min="0" step="0.01">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editCategoria">Categoría</label>
+                        <select id="editCategoria" name="categoria">
+                            <option value="">Seleccionar categoría</option>
+                            <option value="Electrónicos">Electrónicos</option>
+                            <option value="Computadoras">Computadoras</option>
+                            <option value="Accesorios">Accesorios</option>
+                            <option value="Telefonía">Telefonía</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="Hogar">Hogar</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editProveedor">Proveedor</label>
+                        <input type="text" id="editProveedor" name="proveedor">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="editDescripcion">Descripción</label>
+                        <textarea id="editDescripcion" name="descripcion" rows="3"></textarea>
+                    </div>
+                </div>
+                
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="cerrarModalEdicion()">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        Guardar Cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

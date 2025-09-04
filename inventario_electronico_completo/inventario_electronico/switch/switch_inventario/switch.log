@@ -1,0 +1,1869 @@
+nohup: ignoring input
+=== Switch de Inventario Electrónico ===
+Máquina 3 - Switch/Balanceador de Carga
+Puerto: 5002
+Servidores configurados:
+  - Servidor Principal v1.0 (http://localhost:5000) - Peso: 70%
+  - Servidor Backup v1.1 (http://localhost:5002) - Peso: 30%
+IPs permitidas: ['192.168.1.4', '127.0.0.1', '10.0.0.3', 'localhost']
+========================================
+ * Serving Flask app 'main'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://169.254.0.21:5002
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 537-121-114
+127.0.0.1 - - [03/Sep/2025 22:25:40] "[35m[1mGET /api/status HTTP/1.1[0m" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/debug/__init__.py", line 343, in debug_application
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1536, in __call__
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1514, in wsgi_app
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/src/main.py", line 412, in serve
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/helpers.py", line 565, in send_from_directory
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 577, in send_from_directory
+    return send_file(path_str, environ, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 445, in send_file
+    mimetype, encoding = mimetypes.guess_type(download_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/mimetypes.py", line 306, in guess_type
+  File "/usr/lib/python3.11/mimetypes.py", line 379, in init
+  File "/usr/lib/python3.11/mimetypes.py", line 209, in read
+OSError: [Errno 24] Too many open files: '/etc/mime.types'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 333, in execute
+    for data in application_iter:
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/debug/__init__.py", line 358, in debug_application
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/debug/tbtools.py", line 346, in render_debugger_html
+    "summary": self.render_traceback_html(include_title=False),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/debug/tbtools.py", line 277, in render_traceback_html
+    library_frames = [f.is_library for f in self.all_frames]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/debug/tbtools.py", line 277, in <listcomp>
+    library_frames = [f.is_library for f in self.all_frames]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 107, in __get__
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/debug/tbtools.py", line 385, in is_library
+    for path in sysconfig.get_paths().values()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/sysconfig.py", line 652, in get_paths
+  File "/usr/lib/python3.11/sysconfig.py", line 289, in _expand_vars
+  File "/usr/lib/python3.11/sysconfig.py", line 706, in get_config_vars
+  File "/usr/lib/python3.11/sysconfig.py", line 567, in _init_posix
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1130, in get_data
+OSError: [Errno 24] Too many open files: '/usr/lib/python3.11/_sysconfigdata__x86_64-linux-gnu.py'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 346, in execute
+    selector = selectors.DefaultSelector()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/selectors.py", line 349, in __init__
+OSError: [Errno 24] Too many open files
+127.0.0.1 - - [03/Sep/2025 22:25:40] "[35m[1mGET /api/status HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1536, in __call__
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1514, in wsgi_app
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/src/main.py", line 412, in serve
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/helpers.py", line 565, in send_from_directory
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 577, in send_from_directory
+    return send_file(path_str, environ, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 445, in send_file
+    mimetype, encoding = mimetypes.guess_type(download_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/mimetypes.py", line 306, in guess_type
+    init()
+  File "/usr/lib/python3.11/mimetypes.py", line 379, in init
+    db.read(file)
+  File "/usr/lib/python3.11/mimetypes.py", line 209, in read
+    with open(filename, encoding='utf-8') as fp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files: '/etc/mime.types'
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/src/main.py", line 412, in serve
+    return send_from_directory(static_folder_path, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 577, in send_from_directory
+    return send_file(path_str, environ, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 480, in send_file
+    file = open(path, "rb")  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files: '/home/ubuntu/inventario_electronico/switch/switch_inventario/src/static/index.html'
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "[35m[1mGET /api/status HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/src/main.py", line 412, in serve
+    return send_from_directory(static_folder_path, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 577, in send_from_directory
+    return send_file(path_str, environ, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 480, in send_file
+    file = open(path, "rb")  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files: '/home/ubuntu/inventario_electronico/switch/switch_inventario/src/static/index.html'
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 334, in execute
+    write(data)
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 309, in write
+    self.wfile.write(data)
+  File "/usr/lib/python3.11/socketserver.py", line 834, in write
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 346, in execute
+    selector = selectors.DefaultSelector()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/selectors.py", line 349, in __init__
+OSError: [Errno 24] Too many open files
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 346, in execute
+    selector = selectors.DefaultSelector()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/selectors.py", line 349, in __init__
+    self._selector = self._selector_cls()
+                     ^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=NfOPoKcIKz6658oNQnwd HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:25:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 334, in execute
+    write(data)
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 309, in write
+    self.wfile.write(data)
+  File "/usr/lib/python3.11/socketserver.py", line 834, in write
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 346, in execute
+    selector = selectors.DefaultSelector()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/selectors.py", line 349, in __init__
+    self._selector = self._selector_cls()
+                     ^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+127.0.0.1 - - [03/Sep/2025 22:28:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/src/main.py", line 412, in serve
+    return send_from_directory(static_folder_path, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 577, in send_from_directory
+    return send_file(path_str, environ, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 480, in send_file
+    file = open(path, "rb")  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files: '/home/ubuntu/inventario_electronico/switch/switch_inventario/src/static/index.html'
+127.0.0.1 - - [03/Sep/2025 22:28:28] "[35m[1mGET /api/status HTTP/1.1[0m" 500 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/src/main.py", line 412, in serve
+    return send_from_directory(static_folder_path, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 577, in send_from_directory
+    return send_file(path_str, environ, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/utils.py", line 480, in send_file
+    file = open(path, "rb")  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files: '/home/ubuntu/inventario_electronico/switch/switch_inventario/src/static/index.html'
+Error on request:
+Traceback (most recent call last):
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "/home/ubuntu/inventario_electronico/switch/switch_inventario/venv/lib/python3.11/site-packages/werkzeug/serving.py", line 346, in execute
+    selector = selectors.DefaultSelector()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/selectors.py", line 349, in __init__
+    self._selector = self._selector_cls()
+                     ^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 24] Too many open files
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=NfOPoKcIKz6658oNQnwd HTTP/1.1[0m" 304 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2025 22:28:29] "GET /api/status HTTP/1.1" 200 -
